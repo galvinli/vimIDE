@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/galvin/wss_file/code/future/LR/pkg'
+let g:netrw_dirhist_2='/home/galvin/CavuimSDKv3.1'
+let g:netrw_dirhist_3='/home/galvin/CavuimSDKv3.1/tmp'
+let g:netrw_dirhist_4='/home/galvin/Project/AMI-AST2500/src/drivers/reset'
+let g:netrw_dirhist_5='/home/galvin/Project/AMI-AST2500/src/reset_unittest'
