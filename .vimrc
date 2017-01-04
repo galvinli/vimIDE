@@ -100,3 +100,9 @@ autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 " }}}"
 
+
+" {{{ use jkl; instead hjkl }}}"
+noremap ; l
+noremap l k
+noremap k j
+noremap j h
