@@ -106,3 +106,6 @@ noremap ; l
 noremap l k
 noremap k j
 noremap j h
+
+" {{{ tab = 4 space }}}"
+set tabstop=4 shiftwidth=4 expandtab
