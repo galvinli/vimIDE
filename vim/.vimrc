@@ -1,3 +1,6 @@
+syntax on
+filetype plugin indent on
+
 " // The switch of the Source Explorer 
 
 " // Set the height of Source Explorer window 
@@ -45,10 +48,10 @@ let g:SrcExpl_updateTagsKey = "<F12>"
 let g:buftabline_show = 1
 
 " If you want to use VIM with Source Explorer in the UNIXs-console, I suggest map the keys below to jump from one window to another.
-nmap <C-H> <C-W>h 
-nmap <C-J> <C-W>j 
-nmap <C-K> <C-W>k 
-nmap <C-L> <C-W>l 
+noremap <C-W>; <C-W>l
+noremap <C-W>l <C-W>k
+noremap <C-W>k <C-W>j
+noremap <C-W>j <C-W>h
 
 " Below key mappings can replace the Vim feature for jumping to previously visited locations via jump list. 
 nmap <C-I> <C-W>j:call g:SrcExpl_Jump()<CR> 
@@ -77,14 +80,37 @@ nmap <F11> :TrinityToggleNERDTree<CR>
 
 " auto load all plugins in vim bundle
 execute pathogen#infect()
-syntax on
-filetype plugin indent on
 
 " add plugin crtlp.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" add highlight search
-set hlsearch
+" {{{ Config Vim UI
+set hlsearch			" add highlight search
+colorscheme slate		" set vim color
+set t_Co=256			" set 256 colors in vim
+set laststatus=2		" always show tab line
+" }}}
 
-" set vim color
-colorscheme slate
+" {{{ Automatically switch between absolute and relative line number
+set number
+set relativenumber
+autocmd FocusLost   * :set number
+autocmd FocusGained * :set relativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+" }}}"
+
+
+" {{{ use jkl; instead hjkl }}}"
+noremap ; l
+noremap l k
+noremap k j
+noremap j h
+
+" {{{ use h instead Ctrl D, half page down}}}
+noremap h <C-D>
+" {{{ use Ctrl_H instead Ctrl U, half page up}}}
+noremap <C-H> <C-U>
+
+" {{{ tab = 4 space }}}"
+set tabstop=4 shiftwidth=4 expandtab
