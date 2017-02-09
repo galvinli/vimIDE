@@ -114,3 +114,9 @@ noremap <C-H> <C-U>
 
 " {{{ tab = 4 space }}}"
 set tabstop=4 shiftwidth=4 expandtab
+
+
+" {{{High light unwanted spaces in end of line}}}
+highlight ExtraWhitespace ctermbg=darkred guibg=darkcyan
+autocmd BufEnter * if &ft != 'help' | match ExtraWhitespace /\s\+$/ | endif
+autocmd BufEnter * if &ft == 'help' | match none /\s\+$/ | endif
