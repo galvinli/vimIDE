@@ -1,3 +1,5 @@
+# Tutor vim
+    ~# vimtutor
 # Yank a word. 
  yiw
 
