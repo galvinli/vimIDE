@@ -1,6 +1,20 @@
 syntax on
 filetype plugin indent on
 
+"*****************************************************************************
+""" Vim-PLug core, PlugInstall to install
+"*****************************************************************************
+" Required:
+call plug#begin('~/.vim/plugged')
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" c
+Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
+Plug 'ludwig/split-manpage.vim'
+
+" Initialize plugin system
+ call plug#end()
+
 " // The switch of the Source Explorer 
 
 " // Set the height of Source Explorer window 
