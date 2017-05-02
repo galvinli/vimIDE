@@ -86,3 +86,4 @@
 		L -->	| text sample text	    |
 			+---------------------------+
 
+reading vim help at usr_05.txt 
