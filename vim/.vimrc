@@ -7,7 +7,9 @@ filetype plugin indent on
 " Required:
 call plug#begin('~/.vim/plugged')
 " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
+Plug 'vim-scripts/vim-signature'
+Plug 'vim-syntastic/syntastic'
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 Plug 'ludwig/split-manpage.vim'
@@ -112,13 +114,25 @@ autocmd FocusLost   * :set number
 autocmd FocusGained * :set relativenumber
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
-" }}}"
+" }}}
 
-" {{{ tab = 4 space }}}"
-set tabstop=4 shiftwidth=4 expandtab
+" {{{ tab = 4 space 
+    set tabstop=4 shiftwidth=4 expandtab
+"}}}
 
-
-" {{{High light unwanted spaces in end of line}}}
+" {{{ High light unwanted spaces in end of line
 highlight ExtraWhitespace ctermbg=darkred guibg=darkcyan
 autocmd BufEnter * if &ft != 'help' | match ExtraWhitespace /\s\+$/ | endif
 autocmd BufEnter * if &ft == 'help' | match none /\s\+$/ | endif
+" }}}
+
+" {{{ Syntastic Setting
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_style_warning_symbol = '⚠'
+let g:syntastic_auto_loc_list=1
+let g:syntastic_aggregate_errors = 1
+" }}}
+"
