@@ -1,6 +1,6 @@
 # Tutor vim
     ~# vimtutor
-# Yank a word. 
+# Yank a word.
  yiw
 
 
@@ -46,44 +46,46 @@
 # Repart last change.
   The "." command made last change mode in Normal mode.
 
-  yiw for yank a word. "ciw<C-R> 0 <ESC>" to replace a word  
+  yiw for yank a word. "ciw<C-R> 0 <ESC>" to replace a word
 
   # Delete ,["x] mean into  register x
 
  ["x]x         Delete [count] characters under and after the curosr.
 
- ["x]X         Delete [count] characters before the 
+ ["x]X         Delete [count] characters before the
 
  ["x]d{motion} Delete text that {motion} move over.
 
- ["x]D        Delete the characters under the curosr until the end of the lines. 
+ ["x]D        Delete the characters under the curosr until the end of the lines.
 
- 
  # Search and Relpace
    - Search all line
      :1,$s/${thing search}/${thing_replace}/gc
    - Search line 1 to 30
-     :1,30s/${thing_search}/${thing_replace}/gc 
+     :1,30s/${thing_search}/${thing_replace}/gc
 
    - Search each line of beginning and replace
      :1,$s/^/${something u wanna add}/gc
 
-   - Search each line of end and replace  
+   - Search each line of end and replace
      :1,$s/$/${something u wanna add}/gc
 
- # motion.txt 
+ # motion.txt
 
  # Home, Middle, Last
-			+---------------------------+
-		H -->	| text sample text	    |
-			| sample text		    |
-			| text sample text	    |
-			| sample text		    |
-		M -->	| text sample text	    |
-			| sample text		    |
-			| text sample text	    |
-			| sample text		    |
-		L -->	| text sample text	    |
-			+---------------------------+
+            +---------------------------+
+        H -->    | text sample text        |
+            | sample text            |
+            | text sample text        |
+            | sample text            |
+        M -->    | text sample text        |
+            | sample text            |
+            | text sample text        |
+            | sample text            |
+        L -->    | text sample text        |
+            +---------------------------+
 
-reading vim help at usr_05.txt 
+# Add a range number.
+:put=range(1,10)
+
+reading vim help at usr_05.txt

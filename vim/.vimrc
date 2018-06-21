@@ -124,12 +124,20 @@ autocmd BufEnter * if &ft == 'help' | match none /\s\+$/ | endif
 " }}}
 
 " {{{ Syntastic Setting
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol = '✗'
-let g:syntastic_style_warning_symbol = '⚠'
-let g:syntastic_auto_loc_list=1
-let g:syntastic_aggregate_errors = 1
+"let g:syntastic_always_populate_loc_list=1
+"let g:syntastic_error_symbol='✗'
+"let g:syntastic_warning_symbol='⚠'
+"let g:syntastic_style_error_symbol = '✗'
+"let g:syntastic_style_warning_symbol = '⚠'
+"let g:syntastic_auto_loc_list=1
+"let g:syntastic_aggregate_errors=1
+"let g:syntastic_c_compiler="arm-none-linux-gnueabi-gcc --sysroot=/opt/codesourcery/arm-none-linux-gnueabi/libc"
+"let g:syntastic_c_no_default_include_dirs=1
+"let g:syntastic_c_remove_include_errors=1
+"let g:syntastic_c_include_dirs = 
+"["/srv/home/galvin/Project/AMI-AST2500/src/target_ex/usr/include",
+"/srv/home/galvin/Project/AMI-AST2500/src/target_ex/usr/include/arm-linux-gnueabi",
+"/srv/home/galvin/Tools/syntastic/c16"]
+""let g:syntastic_c_no_include_search=1
 " }}}
 "
