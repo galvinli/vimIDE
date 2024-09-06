@@ -113,8 +113,12 @@ autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 " }}}
 
-" {{{ tab = 4 space
-    set tabstop=4 shiftwidth=4 expandtab
+" {{{ tab = 4 space for default settings
+    autocmd FileType * set tabstop=4 shiftwidth=4 expandtab
+"}}}
+
+" {{{ tab = tab character for linux-nitro
+    autocmd FileType c,cpp,h,dts,dtsi set tabstop=4 shiftwidth=4 noexpandtab
 "}}}
 
 " {{{ High light unwanted spaces in end of line
